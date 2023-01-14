@@ -6,6 +6,9 @@ export function Arrays() {
     console.log(itCompanies.join(", ") + " are big IT companies");
     itCompanies.includes("Google") ? console.log(itCompanies[itCompanies.indexOf("Google")]) : console.log("company not found");
     console.log(itCompanies.sort());
+    for(const company of itCompanies) {
+        console.log(company);
+    }
     return(
         <div>
             <h2>This is the array</h2>
