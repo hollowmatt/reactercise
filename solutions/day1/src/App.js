@@ -1,10 +1,10 @@
 import './App.css';
-import { ary } from './components/arrays';
+import { Arrays } from './components/arrays';
 
 export function App() {
   return (
     <div className="App">
-     <ary/>
+     <Arrays />
     </div>
   );
 }
