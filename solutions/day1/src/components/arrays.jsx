@@ -3,9 +3,11 @@ export function Arrays() {
     const numbers = [0, 3.14, 9.81, 37, 98.6, 100] // array of numbers
     const fruits = ['banana', 'orange', 'mango', 'lemon'] // array of strings, fruits
     const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // array of strings, vegetables
-    const animalProducts = ['milk', 'meat', 'butter', 'yoghurt'] // array of strings, products
+    const frontEnd = ['CSS', 'JS', 'HTML', 'React'];
+    const backEnd = ['Node', 'Java'];
+    const database = ['MongoDB', 'CouchDB', 'MySQL'];
+    const fullstack = [frontEnd, backEnd, database];
     const webTechs = ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'MongDB'] // array of web technologies
-    const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland'] // array of strings, countries
     
     const phrase = "Catnip is a bad cat!";
     //create arrays using split
@@ -34,6 +36,9 @@ export function Arrays() {
     console.log(fruitsAndVeggies);
     fruitsAndVeggies.unshift('banana');
     console.log(fruitsAndVeggies);
+    console.log(fullstack);
+    console.log(fullstack[1]);
+    console.log(fullstack[1][1]);
 
     return(
         <div>
