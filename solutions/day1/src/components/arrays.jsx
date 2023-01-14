@@ -39,7 +39,7 @@ export function Arrays() {
         <div>
             <h2>This is the array</h2>
             <p>
-                {ary.join(', ')}
+                {ary.sort().join(', ')}
             </p>
         </div>
     );
