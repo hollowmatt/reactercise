@@ -39,7 +39,7 @@ export function Arrays() {
     console.log(fullstack);
     console.log(fullstack[1]);
     console.log(fullstack[1][1]);
-
+    console.log(lowmidhigh(webTechs));
     return(
         <div>
             <h2>This is the array</h2>
@@ -48,4 +48,12 @@ export function Arrays() {
             </p>
         </div>
     );
+}
+
+function lowmidhigh(input) {
+    const result = [];
+    result.push(input[0]); // first
+    result.push(input[(input.length-1)/2]) //mid
+    result.push(input[input.length-1]); //last
+    return result;
 }
