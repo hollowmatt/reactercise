@@ -22,7 +22,7 @@
       // To get the root element from the HTML document
       const rootElement = document.querySelector('.root')
 
-      // JSX element
+      // JSX element: Header
       const header = (
         <header>
           <h1>Welcome to 30 days of react</h1>
@@ -32,9 +32,38 @@
           <small>Jan, 2023</small>
         </header>
       );
+
+      // JSX element: Body
+      const body = (
+        <main>
+          <p>Getting started pre-reqs:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </main>
+      );
+
+      // JSX element: Footer
+      const footer = (
+        <footer>
+          <p>Copyright, 2023</p>
+        </footer>
+      );
+
+      // App Wrapper
+      const app = (
+        <div>
+          {header}
+          {body}
+          {footer}
+        </div>
+      );
+
       // we render the JSX element using the ReactDOM package
       // ReactDOM has the render method and the render method takes two arguments
-      ReactDOM.render(header, rootElement)
+      ReactDOM.render(app, rootElement)
     </script>
   </body>
 </html>
