@@ -22,11 +22,28 @@
       // To get the root element from the HTML document
       const rootElement = document.querySelector('.root')
 
+      const headerStyle = {
+        backgroundColor: '#61DBFB',
+        fontFamily: 'Google Sans',
+        padding: 25,
+        lineHeight: 1.5,
+        color: 'navy', 
+        fontSize: '18px'
+      };
+
+      const bodyStyle = {
+        backgroundColor: '#F3F0F5',
+        fontFamily: 'Arial',
+      };
+
+      const footerStyle = {
+        backgroundColor: '#61DBFB',
+        fontFamily: 'Open Sans',
+      };
+
       // JSX element: Header
       const header = (
-        <header
-          style={{ border: '2px solid orange', color: 'navy', fontSize: '18pz'}}
-        >
+        <header style={ headerStyle }>
           <h1>Welcome to 30 days of react</h1>
           <h2>Day 2, Getting started</h2>
           <h3>JavaScript</h3>
@@ -37,7 +54,7 @@
 
       // JSX element: Body
       const body = (
-        <main>
+        <main style = { bodyStyle }>
           <p>Getting started pre-reqs:</p>
           <ul>
             <li>HTML</li>
@@ -49,7 +66,7 @@
 
       // JSX element: Footer
       const footer = (
-        <footer>
+        <footer style={ footerStyle }>
           <p>Copyright, 2023</p>
         </footer>
       );
