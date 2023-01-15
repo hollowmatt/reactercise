@@ -97,14 +97,21 @@
       // To get the root element from the HTML document
       const rootElement = document.querySelector('.root')
 
+      const data = {
+        welcome: 'Welcome to 30 days of React',
+        title: 'Day 2: Getting Started',
+        course: 'JavaScript',
+        author: 'M. Holloway',
+        date: 'Jan, 2023',
+      }
       // JSX element: Header
       const header = (
         <header className='header-wrapper'>
-          <h1>Welcome to 30 days of react</h1>
-          <h2>Day 2, Getting started</h2>
-          <h3>JavaScript</h3>
-          <p>M. Holloway</p>
-          <small>Jan, 2023</small>
+          <h1>{data.welcome}</h1>
+          <h2>{data.title}</h2>
+          <h3>{data.course}</h3>
+          <p>{data.author}</p>
+          <small>{data.date}</small>
         </header>
       );
 
