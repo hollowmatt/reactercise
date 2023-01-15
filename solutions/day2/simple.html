@@ -103,7 +103,10 @@
         course: 'JavaScript',
         author: 'M. Holloway',
         date: 'Jan, 2023',
+        reqs: ['HTML', 'CSS', 'JavaScript'],
       }
+      const formattedReq = data.reqs.map((tech) => <li key={tech}>{tech}</li>);
+
       // JSX element: Header
       const header = (
         <header className='header-wrapper'>
@@ -120,9 +123,7 @@
         <main className='main-wrapper'>
           <p>Getting started pre-reqs:</p>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
+            {formattedReq}
           </ul>
         </main>
       );
