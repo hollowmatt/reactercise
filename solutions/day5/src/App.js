@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Movie from './components/Movie';
 import Search from './components/Search';
 
-const OMDB_URL = "http://www.omdbapi.com/?s=man&apikey=d34482f";
+const OMDB_URL = "https://www.omdbapi.com/?s=man&apikey=d34482f";
 
 function App() {
   const [loading, isLoading] = useState(true);
@@ -24,7 +24,7 @@ function App() {
     isLoading(true);
     setErrorMessage(null);
 
-    fetch(`http://www.omdbapi.com/s=${searchValue}&apikey=d34482f`)
+    fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=d34482f`)
       .then(response => response.json())
       .then(jsonResponse => {
         if(jsonResponse.Response === "True") {

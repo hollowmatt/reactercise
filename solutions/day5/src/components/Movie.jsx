@@ -16,7 +16,7 @@ const Movie = ({movie}) => {
           src={poster}
         />
       </div>
-      <p>({movie.year}</p>
+      <p>({movie.Year})</p>
     </div>
   );
 };
