@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import Header from './components/Header';
 import Movie from './components/Movie';
 import Search from './components/Search';
