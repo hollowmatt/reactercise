@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Exercise from './exercise.component';
 
 const EXERCISES_URL = "http://localhost:3030/exercises";
 
@@ -23,9 +24,19 @@ function ExercisesList () {
       ) : errorMsg ? (
         <span color="red">{errorMsg}</span>
       ) : (
-        exercises.map((exercise, index) => (
-          <p>{exercise.description}</p>
-        ))
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-3'><strong>User</strong></div>
+            <div className='col-md-3'><strong>Description</strong></div>
+            <div className='col-md-3'><strong>Duration</strong></div>
+            <div className='col-md-3'><strong>Date</strong></div>
+          </div>
+            { 
+              exercises.map((exercise, index) => (
+                <Exercise exercise={exercise} key={index} />
+              ))
+            }  
+        </div>
       )}
     </div>
   )

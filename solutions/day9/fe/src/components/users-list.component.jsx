@@ -24,7 +24,7 @@ function UsersList () {
         <span color="red">{errorMsg}</span>
       ) : (
         users.map((user, index) => (
-          <p>{user.username}</p>
+          <p key={index}>{user.username}</p>
         ))
       )}
     </div>
