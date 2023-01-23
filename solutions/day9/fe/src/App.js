@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/navbar.component';
 import ExerciseList from './components/exercises-list.component';
@@ -11,20 +11,17 @@ import UsersList from './components/users-list.component';
 
 function App() {
   return (
-    <Router>
-      <div className="container">
-        <Navbar />
-        <br/>
-        <Routes>
-          <Route path="/" exacct component={ExerciseList} />
-          <Route path="/edit/:id" component={EditExercise} />
-          <Route path="/create" component={CreateExercise} />
-          <Route path="/user" component={CreateUser} />
-          <Route path="/users" component={UsersList} />
-        </Routes>
-      </div>
-    </Router>
-   
+    <div className="container">
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<ExerciseList/>} />
+          <Route path="edit/:id" element={<EditExercise/>} />
+          <Route path="create" element={<CreateExercise/>} />
+          <Route path="user" element={<CreateUser/>} />
+          <Route path="/users" element={<UsersList/>} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 
