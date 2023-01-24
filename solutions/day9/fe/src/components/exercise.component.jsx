@@ -26,7 +26,7 @@ function Exercise ({exercise}) {
           objectFit='cover'
           maxW={{ base: '100%', sm: '200px' }}
           src='https://dgtzuqphqg23d.cloudfront.net/sjPfBmbjgLzxk708_Jd14RjJEXY6wfs3WQUnECGcuOk-2048x1152.jpg'
-          alt='Caffe Latte'
+          alt='Fitness'
         />
 
         <Stack>
