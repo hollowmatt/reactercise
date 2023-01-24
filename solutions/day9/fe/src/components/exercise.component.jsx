@@ -17,6 +17,8 @@ function Exercise ({exercise}) {
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'
         variant='outline'
+        padding="5px"
+        margin="5px"
       >
         <Image
           objectFit='cover'
