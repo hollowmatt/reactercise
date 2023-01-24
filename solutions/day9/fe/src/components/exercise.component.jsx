@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 import { 
   Card,
   Image,
@@ -7,7 +8,8 @@ import {
   Heading,
   Text,
   CardFooter,
-  Button,
+  CardHeader,
+  Box,
 } from '@chakra-ui/react';
 
 function Exercise ({exercise}) {
@@ -28,26 +30,26 @@ function Exercise ({exercise}) {
         />
 
         <Stack>
-          <CardBody>
-            <Heading size='md'>{exercise.username}</Heading>
+          <CardHeader>
+            <Box>
+              <Heading size='sm'>{exercise.username}</Heading>
+              <Text>
+                <Moment format="MMM DD YYYY">{exercise.date}</Moment>
+              </Text>
+            </Box>
+          </CardHeader>
 
-            <Text py='2'>
-              {exercise.description}
+          <CardBody>
+            <Text>
+              {exercise.desscription}
             </Text>
           </CardBody>
 
           <CardFooter>
-            <Text py='1'>{exercise.duration}</Text>
-            <Text py='1'>{exercise.date}</Text>
+            <Text py='1'>{exercise.duration} minutes </Text>
           </CardFooter>
         </Stack>
       </Card>
-      {/* <div className='col-md-3'>{exercise.username}</div>
-      <div className='col-md-3'>
-        {exercise.description}
-      </div>
-      <div className='col-md-3'>{exercise.duration}</div>
-      <div className='col-md-3'>{exercise.date}</div> */}
     </div>
   )
 }
