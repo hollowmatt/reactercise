@@ -15,7 +15,7 @@ export function Arrays() {
             {
                 itCompanies.map((company) => {
                     const retVal = company.toUpperCase();
-                    return(<p>{retVal}</p>);
+                    return(<p key={retVal}>{retVal}</p>);
                 })
             }
         </div>
