@@ -34,7 +34,7 @@ function Exercise ({exercise}) {
             <Box>
               <Heading size='sm'>{exercise.username}</Heading>
               <Text>
-                <Moment format="MMM DD YYYY">{exercise.date}</Moment>
+                <Moment format="MMM DD YYYY HH:MM">{exercise.date}</Moment>
               </Text>
             </Box>
           </CardHeader>
