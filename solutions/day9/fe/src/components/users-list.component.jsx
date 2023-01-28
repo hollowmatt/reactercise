@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { SimpleGrid } from '@chakra-ui/react';
+import User from './user.component';
 
 const USERS_URL = "http://localhost:3030/users";
 
@@ -23,10 +25,13 @@ function UsersList () {
       ) : errorMsg ? (
         <span color="red">{errorMsg}</span>
       ) : (
-        users.map((user, index) => (
-          <p key={index}>
-            {user.username}, {user.name}, {user.location}</p>
-        ))
+        <SimpleGrid columns={2} spacingX='40px' spacingY='20px'>
+          {
+            users.map((user, index) => (
+              <User user={user} key={index} />
+            ))
+          }
+        </SimpleGrid>
       )}
     </div>
   )
