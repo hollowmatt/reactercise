@@ -1,42 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Form, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
-const FirstStep = (props) => {
-  const { register, handleSubmit, errors } = useForm();
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+function FirstStep(props){
+  const { register, handleSubmit } = useForm();
+  const [data, setData] = useState("");
 
   return (
-    <Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
+    <form className='input-form' onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
       <div className="col-md-6 offset-md-3">
-        <Form.Group controlId="first_name">
-          <Form.Label>First Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="first_name"
-            placeholder="Enter your first name"
-            autoComplete="off"
-          />
-        </Form.Group>
-
-        <Form.Group controlId="last_name">
-          <Form.Label>Last Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="last_name"
-            placeholder="Enter your last name"
-            autoComplete="off"
-          />
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Next
-        </Button>
+        <input 
+          {...register("first_name")}
+          placeholder="Enter your first name"
+          autoComplete="off"
+        />
+        <input
+          {...register("last_name")}
+          placeholder="Enter your last name"
+          autoComplete="off"
+        />
+        <input type="submit" />
       </div>
-    </Form>
+      <div className='dot-box'>
+        {data}
+      </div>
+    </form>
   );
 };
 
